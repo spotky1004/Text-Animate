@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  color: #eee;
+  font-size: 10vmin;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #222;
+}
+
+#test1 {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+}
+
+#test2 {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+}
