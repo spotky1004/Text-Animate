@@ -14,9 +14,12 @@ const anim2 = new Animator(
   {
     createStyle: {
       from: {
+        opacity: 0,
+        transform: "translateY(500%)",
         transition: "all 0.3s ease-in",
       },
       to: {
+        transform: "translateY(0)",
         color: "#eee",
         opacity: 1
       }
