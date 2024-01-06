@@ -16,12 +16,30 @@ body {
 
 #test1 {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 20%;
 }
 
 #test2 {
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 20%;
+}
+
+#test3 {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+}
+
+#increment-btn {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  padding: 1vh 2vw;
+
+  font-size: 3vmin;
+
+  border: none;
+  background-color: #000;
 }
