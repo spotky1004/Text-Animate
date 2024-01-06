@@ -22,20 +22,20 @@ import applyProperties from "./util/applyProperties.js";
 const defaultOptions = {
   createStyle: {
     from: {
-      opacity: 0,
+      opacity: "0",
       transition: "all 0.4s ease-out",
     },
     to: {
-      opacity: 1
+      opacity: "1"
     }
   },
   removeStyle: {
     from: {
-      opacity: 1,
+      opacity: "1",
       transition: "all 0.2s ease-out",
     },
     to: {
-      opacity: 0
+      opacity: "0"
     }
   },
   removeTimeout: 1000,
@@ -95,7 +95,8 @@ export default class Animator {
     this.clone.style.display = "none !important";
     this.clone.style.visibility = "hidden !important";
 
-    this.options = typeEqualize(this.options, options);
+    this.options = typeEqualize(typeEqualize({}, options), this.options);
+    console.log(this.options);
   }
 
   /**

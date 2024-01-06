@@ -8,8 +8,44 @@ setInterval(() => {
   anim1.update(strs[acc1++ % strs.length].toString().split(""));
 }, 500);
 
-const el2 = document.getElementById("test3");
-const anim2 = new Animator(el2);
+const el2 = document.getElementById("test2");
+const anim2 = new Animator(el2,
+  {
+    createStyle: {
+      from: {
+        filter: "blur(0.8vmin)",
+      },
+      to: {
+        filter: "blur(0.3vmin)",
+        transition: "all 0.8s ease-out",
+      }
+    },
+    removeStyle: {
+      from: {
+        filter: "blur(0.3vmin)",
+      },
+      to: {
+        filter: "blur(0.8vmin)",
+      }
+    },
+    removeTimeout: 1000,
+    moveStyle: {
+      from: {
+      },
+      to: {
+      }
+    },
+    cloneStyle: {
+      from: {
+        filter: "blur(0.8vmin)",
+      },
+      to: {
+        filter: "blur(0.3vmin)",
+        transition: "all 0.8s ease-out",
+      }
+    }
+  }
+);
 const el2Btn = document.getElementById("increment-btn");
 function romanize(num) {
   if (isNaN(num))
@@ -27,10 +63,11 @@ function romanize(num) {
 let acc2 = 0;
 el2Btn.addEventListener("click", () => {
   anim2.update(romanize(++acc2).split(""));
+  if (acc2 >= 100) el2Btn.innerText = "Incremental";
 });
 
 
-const el3 = document.getElementById("test2");
+const el3 = document.getElementById("test3");
 const anim3 = new Animator(
   el3,
   {
